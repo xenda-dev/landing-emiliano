@@ -636,7 +636,10 @@ function LandingPage() {
           <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
             Únete a miles de personas que ya están construyendo su libertad financiera con IA
           </p>
-          <button className="bg-white text-[#0052CC] px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:scale-105 transition inline-flex items-center space-x-2">
+          <button 
+            onClick={scrollToPlans}
+            className="bg-white text-[#0052CC] px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:scale-105 transition inline-flex items-center space-x-2"
+          >
             <span>Comenzar prueba gratuita</span>
             <ArrowRight className="w-5 h-5" />
           </button>
