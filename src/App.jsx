@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, X, ChevronDown, Menu, Star, Zap, Shield, TrendingUp, Users, BarChart3, Brain, Clock, Smartphone, DollarSign, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Check, X, ChevronDown, Menu, Star, Zap, Shield, TrendingUp, Users, BarChart3, Brain, Clock, Smartphone, DollarSign, ArrowRight, CheckCircle2, HelpCircle } from 'lucide-react';
 
 function LandingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
