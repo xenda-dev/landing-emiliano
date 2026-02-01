@@ -637,9 +637,6 @@ function LandingPage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="text-2xl font-bold">Xenda.co</span>
-              </div>
             </div>
             
             <div>
