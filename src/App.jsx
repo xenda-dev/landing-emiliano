@@ -172,7 +172,7 @@ function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <img public="/Logoxenda-removebg-preview.png" alt="Xenda.co" className="h-10 w-auto object-contain" />
+              <img public="/logo.png" alt="Xenda.co" className="h-10 w-auto object-contain" />
               <span className="text-xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
                 Emiliano
               </span>
@@ -652,7 +652,7 @@ function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img public="/Logoxenda-removebg-preview.png" alt="Xenda.co" className="h-8 w-auto object-contain" />
+                <img public="/logo.png" alt="Xenda.co" className="h-8 w-auto object-contain" />
                 <span className="text-2xl font-bold">Xenda.co</span>
               </div>
               <p className="text-slate-400">
