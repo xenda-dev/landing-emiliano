@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Check, X, ChevronDown, Menu, Star, Zap, Shield, TrendingUp, Users, BarChart3, Brain, Clock, Smartphone, DollarSign, ArrowRight, CheckCircle2 } from 'lucide-react';
 
-export default function LandingPage() {
+function LandingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
@@ -702,4 +702,4 @@ export default function LandingPage() {
   );
 };
 
-export default FinancialAILanding;
+export default LandingPage;
