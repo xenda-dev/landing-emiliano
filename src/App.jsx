@@ -172,7 +172,7 @@ function LandingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center space-x-2">
-                <img src="/logo.png" alt="Xenda.co" className="h-20 w-auto object-contain" />
+                <img src="/logo.png" alt="Xenda.co" className="h-24 w-auto object-contain" />
                 <span className="text-xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
                   Xenda.co
                 </span>
