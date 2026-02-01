@@ -168,46 +168,47 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Navigation */}
-      <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <img src="/logo.png" alt="Xenda.co" className="h-10 w-auto object-contain" />
-              <span className="text-xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
-                Xenda.co
-            </div>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-[#1F2937] hover:text-[#0052CC] transition">Características</a>
-              <a href="#pricing" className="text-[#1F2937] hover:text-[#0052CC] transition">Planes</a>
-              <a href="#faq" className="text-[#1F2937] hover:text-[#0052CC] transition">FAQ</a>
-              <button onClick={scrollToPlans} className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition">
-                Empezar Ahora
-              </button>
-            </div>
+<nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-16">
+      <div className="flex items-center space-x-2">
+        <img src="/logo.png" alt="Xenda.co" className="h-10 w-auto object-contain" />
+        <span className="text-xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
+          Xenda.co
+        </span>
+      </div>
+      
+      <div className="hidden md:flex items-center space-x-8">
+        <a href="#features" className="text-[#1F2937] hover:text-[#0052CC] transition">Características</a>
+        <a href="#pricing" className="text-[#1F2937] hover:text-[#0052CC] transition">Planes</a>
+        <a href="#faq" className="text-[#1F2937] hover:text-[#0052CC] transition">FAQ</a>
+        <button onClick={scrollToPlans} className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition">
+          Empezar Ahora
+        </button>
+      </div>
 
-            <button 
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-[#1F2937]"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
+      <button 
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className="md:hidden text-[#1F2937]"
+      >
+        <Menu className="w-6 h-6" />
+      </button>
+    </div>
+  </div>
 
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-slate-200">
-            <div className="px-4 py-4 space-y-3">
-              <a href="#features" className="block text-[#1F2937] hover:text-[#0052CC]">Características</a>
-              <a href="#pricing" className="block text-[#1F2937] hover:text-[#0052CC]">Planes</a>
-              <a href="#faq" className="block text-[#1F2937] hover:text-[#0052CC]">FAQ</a>
-              <button onClick={scrollToPlans} className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg">
-                Empezar Ahora
-              </button>
-            </div>
-          </div>
-        )}
-      </nav>
+  {mobileMenuOpen && (
+    <div className="md:hidden bg-white border-t border-slate-200">
+      <div className="px-4 py-4 space-y-3">
+        <a href="#features" className="block text-[#1F2937] hover:text-[#0052CC]">Características</a>
+        <a href="#pricing" className="block text-[#1F2937] hover:text-[#0052CC]">Planes</a>
+        <a href="#faq" className="block text-[#1F2937] hover:text-[#0052CC]">FAQ</a>
+        <button onClick={scrollToPlans} className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg">
+          Empezar Ahora
+        </button>
+      </div>
+    </div>
+  )}
+</nav>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -612,22 +613,24 @@ function LandingPage() {
                 q: "¿Qué sucede si cancelo mi suscripción?",
                 a: "Puedes cancelar en cualquier momento. Mantendrás acceso hasta el final de tu período de facturación actual y podrás exportar todos tus datos antes de que finalice."
               }
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-slate-50 rounded-xl overflow-hidden">
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition"
-                >
-                  <span className="font-semibold text-slate-900">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-600 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
-                </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-4 text-slate-600">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            ))}
+            <div className="max-w-3xl mx-auto space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-slate-50 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition"
+                  >
+                    <span className="font-semibold text-slate-900">{faq.q}</span>
+                    <ChevronDown className={`w-5 h-5 text-slate-600 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  </button>
+                  {openFaq === index && (
+                    <div className="px-6 pb-4 text-slate-600">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#0052CC] to-[#34D399]">
