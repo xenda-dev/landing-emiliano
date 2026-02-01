@@ -103,28 +103,28 @@ function LandingPage() {
   ];
 
   const testimonials = [
-    {[
   {
-    name: "María González",
-    role: "Emprendedora",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-    text: "En 3 meses logré ahorrar $5,000 que pensé imposibles. La IA me ayudó a identificar gastos ocultos que ni siquiera sabía que tenía.",
+    name: 'María González',
+    role: 'Emprendedora',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
+    comment: 'En 2 meses con Emiliano identifiqué $450 mensuales en gastos innecesarios. Ahora esos $450 van directo a mi fondo de emergencia.',
     rating: 5
   },
   {
-    name: "Carlos Ramírez",
-    role: "Profesional TI",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    text: "Las proyecciones financieras son increíblemente precisas. Me ayudó a planificar la compra de mi casa en tiempo récord.",
+    name: 'Carlos Ramírez',
+    role: 'Ingeniero de Software',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+    comment: 'Probé 5 apps de finanzas antes de Emiliano. Ninguna me duró más de 2 semanas. Con Emiliano llevo 6 meses porque es tan fácil como enviar un mensaje.',
     rating: 5
   },
   {
-    name: "Ana Martínez",
-    role: "Diseñadora",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-    text: "Nunca fui buena con los números, pero esta herramienta lo hace todo tan simple. Ahora tengo control total de mis finanzas.",
+    name: 'Ana Martínez',
+    role: 'Diseñadora',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
+    comment: 'Nunca fui buena con los números, pero esta herramienta lo hace todo tan simple. Ahora tengo control total de mis finanzas.',
     rating: 5
   }
+];
 
   const faqs = [
     {
