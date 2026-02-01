@@ -103,28 +103,28 @@ function LandingPage() {
   ];
 
   const testimonials = [
-    {
-      name: 'María González',
-      role: 'Emprendedora',
-      image: '👩‍💼',
-      comment: 'En 2 meses con Emiliano identifiqué $450 mensuales en gastos innecesarios. Ahora esos $450 van directo a mi fondo de emergencia.',
-      rating: 5
-    },
-    {
-      name: 'Carlos Ramírez',
-      role: 'Ingeniero de Software',
-      image: '👨‍💻',
-      comment: 'Probé 5 apps de finanzas antes de Emiliano. Ninguna me duró más de 2 semanas. Con Emiliano llevo 6 meses porque es tan fácil como enviar un mensaje.',
-      rating: 5
-    },
-    {
-      name: 'Ana y Roberto Silva',
-      role: 'Pareja',
-      image: '👫',
-      comment: 'Finalmente mi esposo y yo estamos en la misma página con el dinero. El hogar compartido de Emiliano salvó nuestra relación y nuestro bolsillo.',
-      rating: 5
-    }
-  ];
+    {[
+  {
+    name: "María González",
+    role: "Emprendedora",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+    text: "En 3 meses logré ahorrar $5,000 que pensé imposibles. La IA me ayudó a identificar gastos ocultos que ni siquiera sabía que tenía.",
+    rating: 5
+  },
+  {
+    name: "Carlos Ramírez",
+    role: "Profesional TI",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    text: "Las proyecciones financieras son increíblemente precisas. Me ayudó a planificar la compra de mi casa en tiempo récord.",
+    rating: 5
+  },
+  {
+    name: "Ana Martínez",
+    role: "Diseñadora",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
+    text: "Nunca fui buena con los números, pero esta herramienta lo hace todo tan simple. Ahora tengo control total de mis finanzas.",
+    rating: 5
+  }
 
   const faqs = [
     {
@@ -168,47 +168,47 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Navigation */}
-<nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex justify-between items-center h-16">
-      <div className="flex items-center space-x-2">
-        <img src="/logo.png" alt="Xenda.co" className="h-10 w-auto object-contain" />
-        <span className="text-xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
-          Xenda.co
-        </span>
-      </div>
-      
-      <div className="hidden md:flex items-center space-x-8">
-        <a href="#features" className="text-[#1F2937] hover:text-[#0052CC] transition">Características</a>
-        <a href="#pricing" className="text-[#1F2937] hover:text-[#0052CC] transition">Planes</a>
-        <a href="#faq" className="text-[#1F2937] hover:text-[#0052CC] transition">FAQ</a>
-        <button onClick={scrollToPlans} className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition">
-          Empezar Ahora
-        </button>
-      </div>
-
-      <button 
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="md:hidden text-[#1F2937]"
-      >
-        <Menu className="w-6 h-6" />
-      </button>
-    </div>
-  </div>
-
-  {mobileMenuOpen && (
-    <div className="md:hidden bg-white border-t border-slate-200">
-      <div className="px-4 py-4 space-y-3">
-        <a href="#features" className="block text-[#1F2937] hover:text-[#0052CC]">Características</a>
-        <a href="#pricing" className="block text-[#1F2937] hover:text-[#0052CC]">Planes</a>
-        <a href="#faq" className="block text-[#1F2937] hover:text-[#0052CC]">FAQ</a>
-        <button onClick={scrollToPlans} className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg">
-          Empezar Ahora
-        </button>
-      </div>
-    </div>
-  )}
-</nav>
+        <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center space-x-2">
+                <img src="/logo.png" alt="Xenda.co" className="h-10 w-auto object-contain" />
+                <span className="text-xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
+                  Xenda.co
+                </span>
+              </div>
+              
+              <div className="hidden md:flex items-center space-x-8">
+                <a href="#features" className="text-[#1F2937] hover:text-[#0052CC] transition">Características</a>
+                <a href="#pricing" className="text-[#1F2937] hover:text-[#0052CC] transition">Planes</a>
+                <a href="#faq" className="text-[#1F2937] hover:text-[#0052CC] transition">FAQ</a>
+                <button onClick={scrollToPlans} className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition">
+                  Empezar Ahora
+                </button>
+              </div>
+        
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden text-[#1F2937]"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+        
+          {mobileMenuOpen && (
+            <div className="md:hidden bg-white border-t border-slate-200">
+              <div className="px-4 py-4 space-y-3">
+                <a href="#features" className="block text-[#1F2937] hover:text-[#0052CC]">Características</a>
+                <a href="#pricing" className="block text-[#1F2937] hover:text-[#0052CC]">Planes</a>
+                <a href="#faq" className="block text-[#1F2937] hover:text-[#0052CC]">FAQ</a>
+                <button onClick={scrollToPlans} className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg">
+                  Empezar Ahora
+                </button>
+              </div>
+            </div>
+          )}
+        </nav>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -540,21 +540,21 @@ function LandingPage() {
               {
                 name: "María González",
                 role: "Emprendedora",
-                image: "👩‍💼",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
                 text: "En 3 meses logré ahorrar $5,000 que pensé imposibles. La IA me ayudó a identificar gastos ocultos que ni siquiera sabía que tenía.",
                 rating: 5
               },
               {
                 name: "Carlos Ramírez",
                 role: "Profesional TI",
-                image: "👨‍💻",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
                 text: "Las proyecciones financieras son increíblemente precisas. Me ayudó a planificar la compra de mi casa en tiempo récord.",
                 rating: 5
               },
               {
                 name: "Ana Martínez",
                 role: "Diseñadora",
-                image: "👩‍🎨",
+                image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
                 text: "Nunca fui buena con los números, pero esta herramienta lo hace todo tan simple. Ahora tengo control total de mis finanzas.",
                 rating: 5
               }
@@ -567,7 +567,11 @@ function LandingPage() {
                 </div>
                 <p className="text-slate-700 mb-6 italic">"{testimonial.text}"</p>
                 <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{testimonial.image}</div>
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover"
+                  />
                   <div>
                     <p className="font-semibold text-[#1F2937]">{testimonial.name}</p>
                     <p className="text-sm text-slate-600">{testimonial.role}</p>
