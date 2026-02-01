@@ -165,6 +165,10 @@ function LandingPage() {
     document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToHowItWorks = () => {
+  document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Navigation */}
@@ -237,8 +241,10 @@ function LandingPage() {
                   >
                     <span>Probar 7 días gratis</span>
                     <ArrowRight className="w-5 h-5" />
-                  </button>
-                  <button className="border-2 border-[#0052CC] text-[#0052CC] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0052CC] hover:text-white transition">
+                  <button 
+                    onClick={scrollToHowItWorks}
+                    className="border-2 border-[#0052CC] text-[#0052CC] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0052CC] hover:text-white transition"
+                  >
                     Ver cómo funciona
                   </button>
                 </div>
@@ -394,7 +400,7 @@ function LandingPage() {
       </section>
 
       {/* How it Works */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-[#34D399]/5">
+      <section id="how-it-works" className="py-20 bg-gradient-to-br from-slate-50 to-[#34D399]/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#1F2937] mb-4">
