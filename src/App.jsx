@@ -656,6 +656,85 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* Contacto */}
+          <section id="contacto" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+            <div className="max-w-3xl mx-auto px-6">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
+                  ¿Tienes preguntas?
+                </h2>
+                <p className="text-xl text-slate-600">
+                  Escríbenos y te responderemos en menos de 24 horas
+                </p>
+              </div>
+          
+              <form 
+                action="https://api.web3forms.com/submit" 
+                method="POST" 
+                className="space-y-6 bg-white p-8 rounded-2xl shadow-xl"
+              >
+                <input type="hidden" name="access_key" value="b0601c0f-6e9c-4221-a38a-bbc7cf552417" />
+                <input type="hidden" name="subject" value="Nuevo contacto desde Xenda.co" />
+                <input type="hidden" name="from_name" value="Soporte Xenda.co" />
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">
+                      Nombre
+                    </label>
+                    <input
+                      type="text"
+                      name="nombre"
+                      required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent"
+                      placeholder="Tu nombre"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+                </div>
+          
+                <div>
+                  <label className="block text-sm font-semibold text-[#1F2937] mb-2">
+                    Mensaje
+                  </label>
+                  <textarea
+                    name="mensaje"
+                    required
+                    rows="5"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent resize-none"
+                    placeholder="¿En qué podemos ayudarte?"
+                  ></textarea>
+                </div>
+          
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:scale-105 transition"
+                >
+                  Enviar mensaje
+                </button>
+              </form>
+          
+              <div className="mt-8 text-center">
+                <p className="text-slate-600 mb-2">O escríbenos directamente a:</p>
+                <a href="mailto:admin@xenda.co" className="text-[#0052CC] font-semibold hover:underline text-lg">
+                  soporte@xenda.co
+                </a>
+              </div>
+            </div>
+          </section>
+
       {/* Footer */}
       <footer className="bg-[#1F2937] text-white py-12">
         <div className="container mx-auto px-6">
@@ -666,7 +745,7 @@ function LandingPage() {
             </div>
             
             <div className="flex space-x-8 text-slate-400 text-sm">
-              <a href="mailto:admin@xenda.co" className="hover:text-white transition">Contacto</a>
+              <a href="#contacto" className="hover:text-white transition">Contacto</a>
               <a href="/privacidad.html" className="hover:text-white transition">Privacidad</a>
               <a href="/terminos.html" className="hover:text-white transition">Términos</a>
             </div>
