@@ -384,7 +384,7 @@ function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#1F2937] mb-4">
-              Tan fácil como 1-2-3
+              Tan fácil como 👇
             </h2>
           </div>
 
@@ -635,42 +635,20 @@ function LandingPage() {
       {/* Footer */}
       <footer className="bg-[#1F2937] text-white py-12">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-6 md:mb-0">
+              <img src="/logo.png" alt="Xenda.co" className="h-10 w-auto" />
+              <span className="text-2xl font-bold">Xenda.co</span>
             </div>
             
-            <div>
-              <h4 className="font-semibold mb-4">Producto</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition">Características</a></li>
-                <li><a href="#" className="hover:text-white transition">Precios</a></li>
-                <li><a href="#" className="hover:text-white transition">Integraciones</a></li>
-                <li><a href="#" className="hover:text-white transition">API</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Recursos</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition">Guías</a></li>
-                <li><a href="#" className="hover:text-white transition">Centro de ayuda</a></li>
-                <li><a href="#" className="hover:text-white transition">Webinars</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Empresa</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition">Sobre nosotros</a></li>
-                <li><a href="#" className="hover:text-white transition">Contacto</a></li>
-                <li><a href="#" className="hover:text-white transition">Privacidad</a></li>
-                <li><a href="#" className="hover:text-white transition">Términos</a></li>
-              </ul>
+            <div className="flex space-x-8 text-slate-400">
+              <a href="#" className="hover:text-white transition">Términos</a>
+              <a href="#" className="hover:text-white transition">Privacidad</a>
+              <a href="#" className="hover:text-white transition">Contacto</a>
             </div>
           </div>
           
-          <div className="border-t border-slate-700 pt-8 text-center text-slate-400">
+          <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
             <p>© 2026 Xenda.co. Todos los derechos reservados.</p>
           </div>
         </div>
