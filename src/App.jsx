@@ -173,9 +173,6 @@ function LandingPage() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center space-x-2">
                 <img src="/logo.png" alt="Xenda.co" className="h-24 w-auto object-contain" />
-                  <p className="text-slate-400">
-                    Tecnología al alcance de tu mano.
-                  </p>
               </div>
               
               <div className="hidden md:flex items-center space-x-8">
