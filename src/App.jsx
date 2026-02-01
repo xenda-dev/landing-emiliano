@@ -580,39 +580,17 @@ function LandingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
-              Preguntas Frecuentes
-            </h2>
-            <p className="text-xl text-slate-600">
-              Todo lo que necesitas saber sobre nuestro asistente financiero
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              {
-                q: "¿Cómo funciona la prueba gratuita de 7 días?",
-                a: "Tendrás acceso completo a todas las funcionalidades del plan que elijas durante 7 días. No necesitas tarjeta de crédito y puedes cancelar en cualquier momento sin costo alguno."
-              },
-              {
-                q: "¿Mis datos financieros están seguros?",
-                a: "Absolutamente. Utilizamos encriptación de nivel bancario (256-bit SSL) y nunca almacenamos tus credenciales de acceso. Tus datos son 100% privados y confidenciales."
-              },
-              {
-                q: "¿Puedo cambiar de plan en cualquier momento?",
-                a: "Sí, puedes actualizar o cambiar tu plan cuando lo desees. Si cambias a un plan superior, solo pagarás la diferencia prorrateada."
-              },
-              {
-                q: "¿La IA realmente puede ayudarme a ahorrar dinero?",
-                a: "Sí. Nuestra IA analiza tus patrones de gasto, identifica áreas de mejora y te sugiere estrategias personalizadas. El 87% de nuestros usuarios logra ahorrar más del 20% de sus ingresos en los primeros 6 meses."
-              },
-              {
-                q: "¿Qué sucede si cancelo mi suscripción?",
-                a: "Puedes cancelar en cualquier momento. Mantendrás acceso hasta el final de tu período de facturación actual y podrás exportar todos tus datos antes de que finalice."
-              }
+        <section id="faq" className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
+                Preguntas Frecuentes
+              </h2>
+              <p className="text-xl text-slate-600">
+                Todo lo que necesitas saber sobre nuestro asistente financiero
+              </p>
+            </div>
+        
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-slate-50 rounded-xl overflow-hidden">
@@ -631,6 +609,8 @@ function LandingPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#0052CC] to-[#34D399]">
