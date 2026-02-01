@@ -103,28 +103,28 @@ function LandingPage() {
   ];
 
   const testimonials = [
-  {
-    name: 'María González',
-    role: 'Emprendedora',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
-    comment: 'En 2 meses con Emiliano identifiqué $450 mensuales en gastos innecesarios. Ahora esos $450 van directo a mi fondo de emergencia.',
-    rating: 5
-  },
-  {
-    name: 'Carlos Ramírez',
-    role: 'Ingeniero de Software',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-    comment: 'Probé 5 apps de finanzas antes de Emiliano. Ninguna me duró más de 2 semanas. Con Emiliano llevo 6 meses porque es tan fácil como enviar un mensaje.',
-    rating: 5
-  },
-  {
-    name: 'Ana Martínez',
-    role: 'Diseñadora',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
-    comment: 'Nunca fui buena con los números, pero esta herramienta lo hace todo tan simple. Ahora tengo control total de mis finanzas.',
-    rating: 5
-  }
-];
+    {
+      name: 'María González',
+      role: 'Emprendedora',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
+      comment: 'En 2 meses con Emiliano identifiqué $450 mensuales en gastos innecesarios. Ahora esos $450 van directo a mi fondo de emergencia.',
+      rating: 5
+    },
+    {
+      name: 'Carlos Ramírez',
+      role: 'Ingeniero de Software',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+      comment: 'Probé 5 apps de finanzas antes de Emiliano. Ninguna me duró más de 2 semanas. Con Emiliano llevo 6 meses porque es tan fácil como enviar un mensaje.',
+      rating: 5
+    },
+    {
+      name: 'Ana Martínez',
+      role: 'Diseñadora',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
+      comment: 'Nunca fui buena con los números, pero esta herramienta lo hace todo tan simple. Ahora tengo control total de mis finanzas.',
+      rating: 5
+    }
+  ];
 
   const faqs = [
     {
@@ -166,104 +166,105 @@ function LandingPage() {
   };
 
   const scrollToHowItWorks = () => {
-  document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Navigation */}
-        <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center space-x-2">
-                <img src="/logo.png" alt="Xenda.co" className="h-24 w-auto object-contain" />
-              </div>
-              
-              <div className="hidden md:flex items-center space-x-8">
-                <a href="#features" className="text-[#1F2937] hover:text-[#0052CC] transition">Características</a>
-                <a href="#pricing" className="text-[#1F2937] hover:text-[#0052CC] transition">Planes</a>
-                <a href="#faq" className="text-[#1F2937] hover:text-[#0052CC] transition">FAQ</a>
-                <button onClick={scrollToPlans} className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition">
-                  Empezar Ahora
-                </button>
-              </div>
-        
-              <button 
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden text-[#1F2937]"
-              >
-                <Menu className="w-6 h-6" />
+      <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-2">
+              <img src="/logo.png" alt="Xenda.co" className="h-24 w-auto object-contain" />
+            </div>
+            
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#features" className="text-[#1F2937] hover:text-[#0052CC] transition">Características</a>
+              <a href="#pricing" className="text-[#1F2937] hover:text-[#0052CC] transition">Planes</a>
+              <a href="#faq" className="text-[#1F2937] hover:text-[#0052CC] transition">FAQ</a>
+              <button onClick={scrollToPlans} className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition">
+                Empezar Ahora
+              </button>
+            </div>
+      
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-[#1F2937]"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+      
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-slate-200">
+            <div className="px-4 py-4 space-y-3">
+              <a href="#features" className="block text-[#1F2937] hover:text-[#0052CC]">Características</a>
+              <a href="#pricing" className="block text-[#1F2937] hover:text-[#0052CC]">Planes</a>
+              <a href="#faq" className="block text-[#1F2937] hover:text-[#0052CC]">FAQ</a>
+              <button onClick={scrollToPlans} className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg">
+                Empezar Ahora
               </button>
             </div>
           </div>
-        
-          {mobileMenuOpen && (
-            <div className="md:hidden bg-white border-t border-slate-200">
-              <div className="px-4 py-4 space-y-3">
-                <a href="#features" className="block text-[#1F2937] hover:text-[#0052CC]">Características</a>
-                <a href="#pricing" className="block text-[#1F2937] hover:text-[#0052CC]">Planes</a>
-                <a href="#faq" className="block text-[#1F2937] hover:text-[#0052CC]">FAQ</a>
-                <button onClick={scrollToPlans} className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-2 rounded-lg hover:shadow-lg">
-                  Empezar Ahora
-                </button>
-              </div>
-            </div>
-          )}
-        </nav>
+        )}
+      </nav>
 
       {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-              {/* Columna izquierda - Texto */}
-              <div className="text-center md:text-left">
-                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#0052CC]/10 to-[#34D399]/10 text-[#0052CC] px-4 py-2 rounded-full mb-6 border border-[#0052CC]/20">
-                  <Zap className="w-4 h-4" />
-                  <span className="text-sm font-medium">Tu asesor financiero con IA en Telegram</span>
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            {/* Columna izquierda - Texto */}
+            <div className="text-center md:text-left">
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#0052CC]/10 to-[#34D399]/10 text-[#0052CC] px-4 py-2 rounded-full mb-6 border border-[#0052CC]/20">
+                <Zap className="w-4 h-4" />
+                <span className="text-sm font-medium">Tu asesor financiero con IA en Telegram</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-[#1F2937] mb-6 leading-tight">
+                Deja de preguntarte{' '}
+                <span className="bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
+                  a dónde va tu dinero
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+                Emiliano analiza tus gastos con la experiencia de un Wealth Manager de 20 años
+                y te dice exactamente dónde estás perdiendo dinero. Sin rodeos. Sin apps complicadas.
+              </p>
+      
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
+                <button 
+                  onClick={scrollToPlans}
+                  className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-2xl hover:scale-105 transition shadow-lg flex items-center justify-center space-x-2"
+                >
+                  <span>Probar 7 días gratis</span>
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+                <button 
+                  onClick={scrollToHowItWorks}
+                  className="border-2 border-[#0052CC] text-[#0052CC] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0052CC] hover:text-white transition"
+                >
+                  Ver cómo funciona
+                </button>
+              </div>
+      
+              <div className="flex items-center justify-center md:justify-start space-x-6 text-sm text-slate-500 flex-wrap gap-4">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-5 h-5 text-[#34D399]" />
+                  <span>Sin permanencia</span>
                 </div>
-                
-                <h1 className="text-4xl md:text-6xl font-bold text-[#1F2937] mb-6 leading-tight">
-                  Deja de preguntarte{' '}
-                  <span className="bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
-                    a dónde va tu dinero
-                  </span>
-                </h1>
-                
-                <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
-                  Emiliano analiza tus gastos con la experiencia de un Wealth Manager de 20 años
-                  y te dice exactamente dónde estás perdiendo dinero. Sin rodeos. Sin apps complicadas.
-                </p>
-        
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
-                  <button 
-                    onClick={scrollToPlans}
-                    className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-2xl hover:scale-105 transition shadow-lg flex items-center justify-center space-x-2"
-                  >
-                    <span>Probar 7 días gratis</span>
-                    <ArrowRight className="w-5 h-5" />
-                  <button 
-                    onClick={scrollToHowItWorks}
-                    className="border-2 border-[#0052CC] text-[#0052CC] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0052CC] hover:text-white transition"
-                  >
-                    Ver cómo funciona
-                  </button>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-5 h-5 text-[#34D399]" />
+                  <span>Cancela cuando quieras</span>
                 </div>
-        
-                <div className="flex items-center justify-center md:justify-start space-x-6 text-sm text-slate-500 flex-wrap gap-4">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-5 h-5 text-[#34D399]" />
-                    <span>Sin permanencia</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-5 h-5 text-[#34D399]" />
-                    <span>Cancela cuando quieras</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-5 h-5 text-[#34D399]" />
-                    <span>Datos 100% seguros</span>
-                  </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-5 h-5 text-[#34D399]" />
+                  <span>Datos 100% seguros</span>
                 </div>
               </div>
+            </div>
 
             {/* Columna derecha - Imagen de Emiliano */}
             <div className="relative">
@@ -277,22 +278,22 @@ function LandingPage() {
           </div>
 
           {/* Estadísticas */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[#0052CC]/5 to-[#34D399]/5 border border-[#0052CC]/10">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent mb-2">$450</div>
-                <div className="text-slate-600">Ahorro promedio mensual</div>
-              </div>
-              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[#0052CC]/5 to-[#34D399]/5 border border-[#0052CC]/10">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent mb-2">30 seg</div>
-                <div className="text-slate-600">Para registrar un gasto</div>
-              </div>
-              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[#0052CC]/5 to-[#34D399]/5 border border-[#0052CC]/10">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent mb-2">24/7</div>
-                <div className="text-slate-600">Disponible en tu bolsillo</div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[#0052CC]/5 to-[#34D399]/5 border border-[#0052CC]/10">
+              <div className="text-4xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent mb-2">$450</div>
+              <div className="text-slate-600">Ahorro promedio mensual</div>
+            </div>
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[#0052CC]/5 to-[#34D399]/5 border border-[#0052CC]/10">
+              <div className="text-4xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent mb-2">30 seg</div>
+              <div className="text-slate-600">Para registrar un gasto</div>
+            </div>
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-[#0052CC]/5 to-[#34D399]/5 border border-[#0052CC]/10">
+              <div className="text-4xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent mb-2">24/7</div>
+              <div className="text-slate-600">Disponible en tu bolsillo</div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Problem-Solution */}
       <section className="py-20 bg-[#1F2937] text-white">
@@ -404,7 +405,7 @@ function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#1F2937] mb-4">
-              Tan fácil como 👇
+              Tan fácil como 1-2-3
             </h2>
           </div>
 
@@ -601,37 +602,37 @@ function LandingPage() {
       </section>
 
       {/* FAQ */}
-        <section id="faq" className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
-                Preguntas Frecuentes
-              </h2>
-              <p className="text-xl text-slate-600">
-                Todo lo que necesitas saber sobre nuestro asistente financiero
-              </p>
-            </div>
-        
-            <div className="max-w-3xl mx-auto space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-xl overflow-hidden">
-                  <button
-                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition"
-                  >
-                    <span className="font-semibold text-slate-900">{faq.q}</span>
-                    <ChevronDown className={`w-5 h-5 text-slate-600 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
-                  </button>
-                  {openFaq === index && (
-                    <div className="px-6 pb-4 text-slate-600">
-                      {faq.a}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+      <section id="faq" className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
+              Preguntas Frecuentes
+            </h2>
+            <p className="text-xl text-slate-600">
+              Todo lo que necesitas saber sobre nuestro asistente financiero
+            </p>
           </div>
-        </section>
+      
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-slate-50 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition"
+                >
+                  <span className="font-semibold text-slate-900">{faq.q}</span>
+                  <ChevronDown className={`w-5 h-5 text-slate-600 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-4 text-slate-600">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#0052CC] to-[#34D399]">
@@ -659,14 +660,12 @@ function LandingPage() {
       <footer className="bg-[#1F2937] text-white py-12">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-            <div className="flex items-center space-x-3 mb-6 md:mb-0">
-              <img src="/logo.png" alt="Xenda.co" className="h-24 w-auto object-contain" />
-              <div>
-                <span className="text-2xl font-bold block">Xenda.co</span>
-              </div>
+            <div className="mb-6 md:mb-0 text-center md:text-left">
+              <span className="text-2xl font-bold block">Xenda.co</span>
+              <span className="text-sm text-slate-400">Asistente Financiero con IA</span>
             </div>
             
-           <div className="flex space-x-8 text-slate-400 text-sm">
+            <div className="flex space-x-8 text-slate-400 text-sm">
               <a href="mailto:admin@xenda.co" className="hover:text-white transition">Contacto</a>
               <a href="/privacidad.html" className="hover:text-white transition">Privacidad</a>
               <a href="/terminos.html" className="hover:text-white transition">Términos</a>
@@ -680,6 +679,6 @@ function LandingPage() {
       </footer>
     </div>
   );
-};
+}
 
 export default LandingPage;
