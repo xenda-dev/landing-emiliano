@@ -174,9 +174,7 @@ function LandingPage() {
             <div className="flex items-center space-x-2">
               <img src="/logo.png" alt="Xenda.co" className="h-10 w-auto object-contain" />
               <span className="text-xl font-bold bg-gradient-to-r from-[#0052CC] to-[#34D399] bg-clip-text text-transparent">
-                Emiliano
-              </span>
-              <span className="text-xs text-slate-500">by Xenda</span>
+                Xenda.co
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -614,18 +612,22 @@ function LandingPage() {
                 q: "¿Qué sucede si cancelo mi suscripción?",
                 a: "Puedes cancelar en cualquier momento. Mantendrás acceso hasta el final de tu período de facturación actual y podrás exportar todos tus datos antes de que finalice."
               }
-            ].map((faq, index) => (
-              <div key={index} className="bg-slate-50 p-6 rounded-xl hover:bg-slate-100 transition">
-                <h3 className="font-semibold text-lg text-[#1F2937] mb-2 flex items-center">
-                  <HelpCircle className="w-5 h-5 mr-2 text-[#0052CC]" />
-                  {faq.q}
-                </h3>
-                <p className="text-slate-600 ml-7">{faq.a}</p>
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-slate-50 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition"
+                >
+                  <span className="font-semibold text-slate-900">{faq.q}</span>
+                  <ChevronDown className={`w-5 h-5 text-slate-600 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-4 text-slate-600">
+                    {faq.a}
+                  </div>
+                )}
               </div>
             ))}
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#0052CC] to-[#34D399]">
