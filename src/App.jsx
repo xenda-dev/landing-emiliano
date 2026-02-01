@@ -597,8 +597,8 @@ function LandingPage() {
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               {
-                q: "¿Cómo funciona la prueba gratuita de 14 días?",
-                a: "Tendrás acceso completo a todas las funcionalidades del plan que elijas durante 14 días. No necesitas tarjeta de crédito y puedes cancelar en cualquier momento sin costo alguno."
+                q: "¿Cómo funciona la prueba gratuita de 7 días?",
+                a: "Tendrás acceso completo a todas las funcionalidades del plan que elijas durante 7 días. No necesitas tarjeta de crédito y puedes cancelar en cualquier momento sin costo alguno."
               },
               {
                 q: "¿Mis datos financieros están seguros?",
@@ -655,7 +655,7 @@ function LandingPage() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <DollarSign className="w-8 h-8 text-[#34D399]" />
-                <span className="text-2xl font-bold">FinanzasIA</span>
+                <span className="text-2xl font-bold">Xenda.co</span>
               </div>
               <p className="text-slate-400">
                 Tu asistente financiero inteligente para alcanzar tus metas económicas.
@@ -694,7 +694,7 @@ function LandingPage() {
           </div>
           
           <div className="border-t border-slate-700 pt-8 text-center text-slate-400">
-            <p>© 2026 FinanzasIA. Todos los derechos reservados.</p>
+            <p>© 2026 Xenda.co. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
