@@ -172,7 +172,7 @@ function LandingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center space-x-2">
-                <img src="/logo.png" alt="Xenda.co" className="h-24 w-auto object-contain" />
+                <img src="/logo.png" alt="Xenda.co" className="h-25 w-auto object-contain" />
               </div>
               
               <div className="hidden md:flex items-center space-x-8">
