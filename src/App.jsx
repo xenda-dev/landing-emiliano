@@ -660,10 +660,10 @@ function LandingPage() {
               </div>
             </div>
             
-            <div className="flex space-x-8 text-slate-400 text-sm">
-              <a href="mailto:hola@xenda.co" className="hover:text-white transition">Contacto</a>
-              <a href="#" className="hover:text-white transition">Privacidad</a>
-              <a href="#" className="hover:text-white transition">Términos</a>
+           <div className="flex space-x-8 text-slate-400 text-sm">
+              <a href="mailto:admin@xenda.co" className="hover:text-white transition">Contacto</a>
+              <a href="/privacidad.html" className="hover:text-white transition">Privacidad</a>
+              <a href="/terminos.html" className="hover:text-white transition">Términos</a>
             </div>
           </div>
           
