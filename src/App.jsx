@@ -658,144 +658,139 @@ function LandingPage() {
       </section>
 
       {/* Modal de Contacto */}
-      {contactModalOpen && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-          onClick={() => setContactModalOpen(false)}
-        >
-          <div 
-            className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header del Modal */}
-            <div className="sticky top-0 bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-8 py-6 rounded-t-2xl">
-              <div className="flex justify-between items-center">
-                <div>
-                  <h2 className="text-3xl font-bold">¿Tienes preguntas?</h2>
-                  <p className="text-blue-50 mt-1">Escríbenos y te responderemos en menos de 24 horas</p>
-                </div>
-                <button
-                  onClick={() => setContactModalOpen(false)}
-                  className="text-white hover:bg-white/20 rounded-full p-2 transition"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-            </div>
-
-            {/* Formulario */}
-            <form 
-              action="https://api.web3forms.com/submit" 
-              method="POST" 
-              className="p-8 space-y-6"
-            >
-              <input type="hidden" name="access_key" value="b0601c0f-6e9c-4221-a38a-bbc7cf552417" />
-              <input type="hidden" name="from_name" value="Formulario Xenda.co" />
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-[#1F2937] mb-2">
-                    Nombre <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="nombre"
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent"
-                    placeholder="Tu nombre completo"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold text-[#1F2937] mb-2">
-                    Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-[#1F2937] mb-2">
-                  Asunto <span className="text-red-500">*</span>
-                </label>
-                <select
-                  name="asunto"
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent"
-                >
-                  <option value="">Selecciona un asunto...</option>
-                  <option value="Consulta sobre planes">Consulta sobre planes</option>
-                  <option value="Soporte técnico">Soporte técnico</option>
-                  <option value="Sugerencia">Sugerencia</option>
-                  <option value="Problema con el servicio">Problema con el servicio</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-[#1F2937] mb-2">
-                  Mensaje <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  name="mensaje"
-                  required
-                  rows="6"
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent resize-none"
-                  placeholder="¿En qué podemos ayudarte?"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:scale-105 transition"
+            {contactModalOpen && (
+              <div 
+                className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+                onClick={() => setContactModalOpen(false)}
               >
-                Enviar mensaje
-              </button>
-            </form>
-
-            {/* Footer del Modal */}
-            <div className="px-8 pb-8 text-center border-t border-slate-200 pt-6">
-              <p className="text-slate-600 mb-2">O escríbenos directamente a:</p>
-              <a href="mailto:admin@xenda.co" className="text-[#0052CC] font-semibold hover:underline text-lg">
-                soporte@xenda.co
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
+                <div 
+                  className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {/* Header del Modal */}
+                  <div className="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-5 rounded-t-2xl">
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <h2 className="text-2xl font-bold">¿Tienes preguntas?</h2>
+                        <p className="text-blue-50 text-sm mt-1">Te responderemos en menos de 24 horas</p>
+                      </div>
+                      <button
+                        onClick={() => setContactModalOpen(false)}
+                        className="text-white hover:bg-white/20 rounded-full p-2 transition"
+                      >
+                        <X className="w-6 h-6" />
+                      </button>
+                    </div>
+                  </div>
+            
+                  {/* Formulario */}
+                  <form 
+                    action="https://api.web3forms.com/submit" 
+                    method="POST" 
+                    className="p-6 space-y-4"
+                  >
+                    <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI" />
+                    <input type="hidden" name="from_name" value="Formulario Xenda.co" />
+                    
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">
+                          Nombre <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="nombre"
+                          required
+                          className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent text-sm"
+                          placeholder="Tu nombre completo"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">
+                          Email <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          name="email"
+                          required
+                          className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent text-sm"
+                          placeholder="tu@email.com"
+                        />
+                      </div>
+                    </div>
+            
+                    <div>
+                      <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">
+                        Asunto <span className="text-red-500">*</span>
+                      </label>
+                      <select
+                        name="asunto"
+                        required
+                        className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent text-sm"
+                      >
+                        <option value="">Selecciona un asunto...</option>
+                        <option value="Consulta sobre planes">Consulta sobre planes</option>
+                        <option value="Soporte técnico">Soporte técnico</option>
+                        <option value="Sugerencia">Sugerencia</option>
+                        <option value="Problema con el servicio">Problema con el servicio</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                    </div>
+            
+                    <div>
+                      <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">
+                        Mensaje <span className="text-red-500">*</span>
+                      </label>
+                      <textarea
+                        name="mensaje"
+                        required
+                        rows="5"
+                        className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent resize-none text-sm"
+                        placeholder="¿En qué podemos ayudarte?"
+                      ></textarea>
+                    </div>
+            
+                    <button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition"
+                    >
+                      Enviar mensaje
+                    </button>
+                  </form>
+                </div>
+              </div>
+            )}
 
       {/* Footer */}
-      <footer className="bg-[#1F2937] text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-            <div className="mb-6 md:mb-0 text-center md:text-left">
-              <span className="text-2xl font-bold block">Xenda.co</span>
-              <span className="text-sm text-slate-400">Inteligencia que evoluciona contigo</span>
+        <footer className="bg-[#1F2937] text-white py-12">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+              <div className="mb-6 md:mb-0 text-center md:text-left">
+                <span className="text-2xl font-bold block">Xenda.co</span>
+                <span className="text-sm text-slate-400">Inteligencia que evoluciona contigo</span>
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-400 text-sm">
+                <button 
+                  onClick={() => setContactModalOpen(true)}
+                  className="hover:text-white transition"
+                >
+                  Contacto
+                </button>
+                <a href="mailto:soporte@xenda.co" className="hover:text-white transition">
+                  soporte@xenda.co
+                </a>
+                <a href="/privacidad.html" className="hover:text-white transition">Privacidad</a>
+                <a href="/terminos.html" className="hover:text-white transition">Términos</a>
+              </div>
             </div>
             
-            <div className="flex space-x-8 text-slate-400 text-sm">
-              <button 
-                onClick={() => setContactModalOpen(true)}
-                className="hover:text-white transition"
-              >
-                Contacto
-              </button>
-              <a href="/privacidad.html" className="hover:text-white transition">Privacidad</a>
-              <a href="/terminos.html" className="hover:text-white transition">Términos</a>
+            <div className="border-t border-slate-700 pt-6 text-center text-slate-400 text-sm">
+              <p>© 2026 Xenda.co. Todos los derechos reservados.</p>
             </div>
           </div>
-          
-          <div className="border-t border-slate-700 pt-6 text-center text-slate-400 text-sm">
-            <p>© 2026 Xenda.co. Todos los derechos reservados.</p>
-          </div>
-        </div>
-      </footer>
+        </footer>
     </div>
   );
 }
