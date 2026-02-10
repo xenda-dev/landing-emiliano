@@ -763,34 +763,34 @@ function LandingPage() {
             )}
 
       {/* Footer */}
-        <footer className="bg-[#1F2937] text-white py-12">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-              <div className="mb-6 md:mb-0 text-center md:text-left">
-                <span className="text-2xl font-bold block">Xenda.co</span>
-                <span className="text-sm text-slate-400">Inteligencia que evoluciona contigo</span>
-              </div>
-              
-              <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-400 text-sm">
-                <button 
-                  onClick={() => setContactModalOpen(true)}
-                  className="hover:text-white transition"
-                >
-                  Contacto
-                </button>
-                <a href="mailto:soporte@xenda.co" className="hover:text-white transition">
-                  soporte@xenda.co
-                </a>
-                <a href="/privacidad.html" className="hover:text-white transition">Privacidad</a>
-                <a href="/terminos.html" className="hover:text-white transition">Términos</a>
-              </div>
+      <footer className="bg-[#1F2937] text-white py-12">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+            <div className="mb-6 md:mb-0 text-center md:text-left">
+              <span className="text-2xl font-bold block">Xenda.co</span>
+              <span className="text-sm text-slate-400">Inteligencia que evoluciona contigo</span>
             </div>
             
-            <div className="border-t border-slate-700 pt-6 text-center text-slate-400 text-sm">
-              <p>© 2026 Xenda.co. Todos los derechos reservados.</p>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-400 text-sm">
+              <button 
+                onClick={() => setContactModalOpen(true)}
+                className="hover:text-white transition"
+              >
+                Contacto
+              </button>
+              <a href="/privacidad.html" className="hover:text-white transition">Privacidad</a>
+              <a href="/terminos.html" className="hover:text-white transition">Términos</a>
             </div>
           </div>
-        </footer>
+          
+          <div className="border-t border-slate-700 pt-6 text-center text-slate-400 text-sm space-y-2">
+            <p>© 2026 Xenda.co. Todos los derechos reservados.</p>
+            <p>
+              E-mail: <a href="mailto:soporte@xenda.co" className="text-[#34D399] hover:text-white transition font-medium">soporte@xenda.co</a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
