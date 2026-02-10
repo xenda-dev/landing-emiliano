@@ -741,7 +741,7 @@ function LandingPage() {
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="mb-6 md:mb-0 text-center md:text-left">
               <span className="text-2xl font-bold block">Xenda.co</span>
-              <span className="text-sm text-slate-400">Tecnología al alcance de tu mano</span>
+              <span className="text-sm text-slate-400">Inteligenica que evoluciona contigo</span>
             </div>
             
             <div className="flex space-x-8 text-slate-400 text-sm">
