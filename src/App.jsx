@@ -689,7 +689,7 @@ function LandingPage() {
                     method="POST" 
                     className="p-6 space-y-4"
                   >
-                    <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI" />
+                    <input type="hidden" name="access_key" value="b0601c0f-6e9c-4221-a38a-bbc7cf552417" />
                     <input type="hidden" name="from_name" value="Formulario Xenda.co" />
                     
                     <div className="grid md:grid-cols-2 gap-4">
