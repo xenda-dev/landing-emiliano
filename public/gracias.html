@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Gracias por tu compra! - Xenda.co</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0052CC',
+            secondary: '#34D399',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen flex items-center justify-center p-4">
+  
+  <div class="max-w-2xl w-full">
+    <!-- Tarjeta principal -->
+    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+      
+      <!-- Header con gradiente -->
+      <div class="bg-gradient-to-r from-[#0052CC] to-[#34D399] px-8 py-12 text-center">
+        <!-- Icono de check animado -->
+        <div class="mb-6">
+          <div class="w-24 h-24 bg-white rounded-full mx-auto flex items-center justify-center shadow-lg">
+            <svg class="w-12 h-12 text-[#34D399]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">
+          ¡Pago completado!
+        </h1>
+        <p class="text-xl text-blue-50">
+          Bienvenido a Emiliano
+        </p>
+      </div>
+
+      <!-- Contenido -->
+      <div class="px-8 py-10">
+        
+        <!-- Mensaje principal -->
+        <div class="text-center mb-10">
+          <p class="text-xl text-slate-700 leading-relaxed">
+            Tu pago ha sido procesado exitosamente.<br/>
+            ¡Estás a un paso de transformar tus finanzas! 🚀
+          </p>
+        </div>
+
+        <!-- Próximos pasos -->
+        <div class="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-2xl p-8 mb-8">
+          <h2 class="text-2xl font-bold text-[#1F2937] mb-6 flex items-center">
+            <svg class="w-6 h-6 text-[#0052CC] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            ¿Qué sigue ahora?
+          </h2>
+          
+          <div class="space-y-6">
+            <!-- Paso 1 -->
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+                1
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-[#1F2937] text-lg mb-2">
+                  📧 Revisa tu correo electrónico
+                </h3>
+                <p class="text-slate-600">
+                  En los próximos <strong>5 minutos</strong> recibirás 2 emails:
+                </p>
+                <ul class="mt-3 space-y-2 text-slate-600">
+                  <li class="flex items-start">
+                    <span class="text-[#34D399] mr-2">✓</span>
+                    <span><strong>Email de Stripe:</strong> Confirmación de pago y recibo</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#34D399] mr-2">✓</span>
+                    <span><strong>Email de ventas@xenda.co:</strong> Acceso a Emiliano y próximos pasos</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+                2
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-[#1F2937] text-lg mb-2">
+                  💬 Accede a Emiliano en Telegram
+                </h3>
+                <p class="text-slate-600">
+                  El email de bienvenida incluirá el link directo para abrir Emiliano en Telegram.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+                3
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-[#1F2937] text-lg mb-2">
+                  ⚙️ Completa tu configuración inicial
+                </h3>
+                <p class="text-slate-600">
+                  Emiliano te guiará para configurar tu perfil y preferencias (toma solo 2 minutos).
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+                4
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-[#1F2937] text-lg mb-2">
+                  🎯 ¡Empieza a registrar tus gastos!
+                </h3>
+                <p class="text-slate-600">
+                  Envía tu primer gasto a Emiliano y comienza a tomar control de tus finanzas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerta importante -->
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg mb-8">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-yellow-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-yellow-800 mb-1">¡No olvides revisar tu carpeta de SPAM!</p>
+              <p class="text-yellow-700 text-sm">
+                A veces los emails automáticos pueden llegar a la carpeta de correo no deseado. Si no ves los emails en tu bandeja principal, revisa ahí.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="space-y-4">
+          <a 
+            href="/" 
+            class="block w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white text-center px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:scale-105 transition"
+          >
+            Volver a la página principal
+          </a>
+          
+          <div class="text-center">
+            <p class="text-slate-600 text-sm mb-2">¿Necesitas ayuda?</p>
+            <a href="mailto:soporte@xenda.co" class="text-[#0052CC] hover:text-[#34D399] font-semibold transition">
+              Contáctanos: soporte@xenda.co
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer pequeño -->
+    <div class="text-center mt-8 text-slate-500 text-sm">
+      <p>© 2026 Xenda.co - Asistente Financiero con IA</p>
+    </div>
+  </div>
+
+</body>
+</html>
