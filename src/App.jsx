@@ -746,9 +746,13 @@ function LandingPage() {
                       >
                         <option value="">Selecciona un asunto...</option>
                         <option value="Consulta sobre planes">Consulta sobre planes</option>
+                        <option value="Problema con el pago">Problema con el pago</option>
+                        <option value="No recibí el email de acceso">No recibí el email de acceso</option>
+                        <option value="No puedo acceder a Emiliano">No puedo acceder a Emiliano</option>
                         <option value="Soporte técnico">Soporte técnico</option>
+                        <option value="Cancelar suscripción">Cancelar suscripción</option>
+                        <option value="Cambiar de plan">Cambiar de plan</option>
                         <option value="Sugerencia">Sugerencia</option>
-                        <option value="Problema con el servicio">Problema con el servicio</option>
                         <option value="Otro">Otro</option>
                       </select>
                     </div>
