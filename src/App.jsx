@@ -8,67 +8,79 @@ function LandingPage() {
   const [contactModalOpen, setContactModalOpen] = useState(false); // NUEVO
 
   const plans = [
-    {
-      name: 'Básico',
-      monthlyPrice: 9.99,
-      annualPrice: 99,
-      popular: false,
-      description: 'Perfecto para comenzar a tomar control de tus finanzas',
-      features: [
-        'Registro ilimitado de ingresos y gastos',
-        '1 cuenta bancaria',
-        'Análisis mensual de salud financiera',
-        'Alertas de gastos excesivos',
-        'Reportes básicos semanales',
-        'Acceso a categorías predefinidas'
-      ],
-      notIncluded: [
-        'Registro por voz o foto',
-        'Módulo de deudas y metas',
-        'Hogar compartido'
-      ]
+  {
+    name: 'Básico',
+    monthlyPrice: 9.99,
+    annualPrice: 99,
+    popular: false,
+    description: 'Perfecto para comenzar a tomar control de tus finanzas',
+    stripeLinks: {
+      monthly: 'https://buy.stripe.com/test_9B600j6mV7jE6RQdes7ok03',
+      annual: 'https://buy.stripe.com/test_00w5kD9z7eM6ccaeiw7ok04'
     },
-    {
-      name: 'Premium',
-      monthlyPrice: 19.99,
-      annualPrice: 199,
-      popular: true,
-      description: 'La opción más elegida para finanzas familiares',
-      features: [
-        'Todo lo del plan Básico',
-        'Registro por voz y fotos (OCR)',
-        'Hasta 5 cuentas bancarias',
-        'Módulo completo de deudas',
-        'Módulo completo de metas',
-        'Análisis semanal personalizado',
-        'Reportes avanzados diarios',
-        'Consejos personalizados con IA',
-        'Hogar compartido (2 miembros)',
-        'Dashboard web completo'
-      ],
-      notIncluded: []
+    features: [
+      'Registro ilimitado de ingresos y gastos',
+      '1 cuenta bancaria',
+      'Análisis mensual de salud financiera',
+      'Alertas de gastos excesivos',
+      'Reportes básicos semanales',
+      'Acceso a categorías predefinidas'
+    ],
+    notIncluded: [
+      'Registro por voz o foto',
+      'Módulo de deudas y metas',
+      'Hogar compartido'
+    ]
+  },
+  {
+    name: 'Premium',
+    monthlyPrice: 19.99,
+    annualPrice: 199,
+    popular: true,
+    description: 'La opción más elegida para finanzas familiares',
+    stripeLinks: {
+      monthly: 'https://buy.stripe.com/test_6oU4gz12BbzUfom1vK7ok05',
+      annual: 'https://buy.stripe.com/test_bJecN526F5bwa42gqE7ok06'
     },
-    {
-      name: 'Elite',
-      monthlyPrice: 39.99,
-      annualPrice: 399,
-      popular: false,
-      description: 'Para quienes buscan excelencia financiera total',
-      features: [
-        'Todo lo del plan Premium',
-        'Cuentas bancarias ilimitadas',
-        'Análisis predictivo con IA',
-        'Hogar familiar (5 miembros)',
-        'Exportación a PDF y Excel',
-        'Dashboard premium con visualizaciones 3D',
-        'Consultas prioritarias',
-        'Reportes personalizados a demanda',
-        'Soporte prioritario',
-        'Asesoría financiera mensual'
-      ],
-      notIncluded: []
-    }
-  ];
+    features: [
+      'Todo lo del plan Básico',
+      'Registro por voz y fotos (OCR)',
+      'Hasta 5 cuentas bancarias',
+      'Módulo completo de deudas',
+      'Módulo completo de metas',
+      'Análisis semanal personalizado',
+      'Reportes avanzados diarios',
+      'Consejos personalizados con IA',
+      'Hogar compartido (2 miembros)',
+      'Dashboard web completo'
+    ],
+    notIncluded: []
+  },
+  {
+    name: 'Elite',
+    monthlyPrice: 39.99,
+    annualPrice: 399,
+    popular: false,
+    description: 'Para quienes buscan excelencia financiera total',
+    stripeLinks: {
+      monthly: 'https://buy.stripe.com/test_6oU9AT4eN33oeki4HW7ok07',
+      annual: 'https://buy.stripe.com/test_5kQ14nfXveM6dge7U87ok08'
+    },
+    features: [
+      'Todo lo del plan Premium',
+      'Cuentas bancarias ilimitadas',
+      'Análisis predictivo con IA',
+      'Hogar familiar (5 miembros)',
+      'Exportación a PDF y Excel',
+      'Dashboard premium con visualizaciones 3D',
+      'Consultas prioritarias',
+      'Reportes personalizados a demanda',
+      'Soporte prioritario',
+      'Asesoría financiera mensual'
+    ],
+    notIncluded: []
+  }
+];
 
   const features = [
     {
@@ -514,11 +526,14 @@ function LandingPage() {
                   )}
                 </div>
 
-                <button className={`w-full py-3 rounded-lg font-semibold transition mb-8 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white hover:shadow-xl hover:scale-105'
-                    : 'bg-slate-100 text-[#1F2937] hover:bg-gradient-to-r hover:from-[#0052CC] hover:to-[#34D399] hover:text-white'
-                }`}>
+                <button 
+                  onClick={() => window.location.href = isAnnual ? plan.stripeLinks.annual : plan.stripeLinks.monthly}
+                  className={`w-full py-3 rounded-lg font-semibold transition mb-8 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white hover:shadow-xl hover:scale-105'
+                      : 'bg-slate-100 text-[#1F2937] hover:bg-gradient-to-r hover:from-[#0052CC] hover:to-[#34D399] hover:text-white'
+                  }`}
+                >
                   Empezar prueba gratis
                 </button>
 
