@@ -39,7 +39,7 @@
           ¡Pago completado!
         </h1>
         <p class="text-xl text-blue-50">
-          Bienvenido, Emiliano te espera a bordo
+          Bienvenido a Emiliano
         </p>
       </div>
 
@@ -162,9 +162,12 @@
           
           <div class="text-center">
             <p class="text-slate-600 text-sm mb-2">¿Necesitas ayuda?</p>
-            <a href="mailto:soporte@xenda.co" class="text-[#0052CC] hover:text-[#34D399] font-semibold transition">
-              Contáctanos: soporte@xenda.co
-            </a>
+            <button 
+              onclick="openContactModal()"
+              class="text-[#0052CC] hover:text-[#34D399] font-semibold transition cursor-pointer"
+            >
+              Contáctanos
+            </button>
           </div>
         </div>
 
@@ -176,6 +179,125 @@
       <p>© 2026 Xenda.co - Asistente Financiero con IA</p>
     </div>
   </div>
+
+  <!-- Modal de Contacto -->
+  <div id="contactModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full" onclick="event.stopPropagation()">
+      <!-- Header del Modal -->
+      <div class="bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-5 rounded-t-2xl">
+        <div class="flex justify-between items-center">
+          <div>
+            <h2 class="text-2xl font-bold">¿Necesitas ayuda?</h2>
+            <p class="text-blue-50 text-sm mt-1">Te responderemos en menos de 24 horas</p>
+          </div>
+          <button onclick="closeContactModal()" class="text-white hover:bg-white/20 rounded-full p-2 transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <form action="https://api.web3forms.com/submit" method="POST" class="p-6 space-y-4">
+        <input type="hidden" name="access_key" value="b0601c0f-6e9c-4221-a38a-bbc7cf552417" />
+        <input type="hidden" name="from_name" value="Formulario Xenda.co - Post Compra" />
+        
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold text-[#1F2937] mb-1.5">
+              Nombre <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="nombre"
+              required
+              class="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent text-sm"
+              placeholder="Tu nombre completo"
+            />
+          </div>
+          
+          <div>
+            <label class="block text-sm font-semibold text-[#1F2937] mb-1.5">
+              Email <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              class="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent text-sm"
+              placeholder="tu@email.com"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-[#1F2937] mb-1.5">
+            Asunto <span class="text-red-500">*</span>
+          </label>
+          <select
+            name="asunto"
+            required
+            class="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent text-sm"
+          >
+            <option value="">Selecciona un asunto...</option>
+            <option value="No recibí el email de acceso">No recibí el email de acceso</option>
+            <option value="No puedo acceder a Emiliano">No puedo acceder a Emiliano</option>
+            <option value="Problema con el pago">Problema con el pago</option>
+            <option value="Problema técnico">Problema técnico</option>
+            <option value="Consulta sobre mi plan">Consulta sobre mi plan</option>
+            <option value="Cancelar suscripción">Cancelar suscripción</option>
+            <option value="Cambiar de plan">Cambiar de plan</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-[#1F2937] mb-1.5">
+            Mensaje <span class="text-red-500">*</span>
+          </label>
+          <textarea
+            name="mensaje"
+            required
+            rows="5"
+            class="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0052CC] focus:border-transparent resize-none text-sm"
+            placeholder="Describe tu problema o consulta..."
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-gradient-to-r from-[#0052CC] to-[#34D399] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition"
+        >
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openContactModal() {
+      document.getElementById('contactModal').classList.remove('hidden');
+    }
+
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.add('hidden');
+    }
+
+    // Cerrar modal al hacer click fuera
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeContactModal();
+      }
+    });
+
+    // Cerrar modal con tecla ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeContactModal();
+      }
+    });
+  </script>
 
 </body>
 </html>
